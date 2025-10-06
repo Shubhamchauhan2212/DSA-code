@@ -18,7 +18,7 @@ int binarysearch(int arr[], int n, int key)
 
 int main()
 {
-    int arr[] = {1, 4, 7, 2, 5, 8, 3, 6, 9};
+    int arr[] = {1,2,3,4,5,6,7,8,9};
     int n = 9, key = 9;
 
     int result = binarysearch(arr, n, key);

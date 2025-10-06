@@ -1,6 +1,21 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
+void selection_sort(int arr[], int n)
+{
+    for (int i = 0; i < n - 1; i++)
+    {
+        int minIndex = i;
 
+        for (int j = i + 1; j < n; j++)
+        {
+            if (arr[j] < arr[minIndex])
+            {
+                minIndex = j;
+            }
+        }
+        swap(arr[i],arr[minIndex]);
+    }
+}
 int main()
 {
     int n;
@@ -13,18 +28,13 @@ int main()
     {
         cin >> arr[i];
     }
-
-    int prefix[n];
-    prefix[0] = arr[0];
-    for (int i = 1; i < n; i++)
-    {
-        prefix[i] = prefix[i - 1] + arr[i];
-    }
-    cout<<"Prefix array: ";
+    selection_sort(arr,n);
+    cout<<"Sorted array: ";
     for (int i = 0; i < n; i++)
     {
-        cout << prefix[i] << " ";
+        cout<<arr[i]<< " ";
     }
+    
 
     return 0;
 }

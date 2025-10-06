@@ -1,4 +1,4 @@
-//checking each eleement and if key will found hten stop
+//checking each eleement and if key will found then stop
 
 #include <iostream>
 using namespace std;

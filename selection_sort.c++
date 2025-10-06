@@ -5,7 +5,7 @@ void selection_sort(int arr[], int n)
     for (int i = 0; i <= n - 2; i++)
     {
         int mini = i;
-        for (int j = i+1; j < n; j++)
+        for (int j = i + 1; j < n; j++)
         {
             if (arr[j] < arr[mini])
             {
@@ -20,14 +20,17 @@ void selection_sort(int arr[], int n)
 int main()
 {
     int n;
+    cout << "Enter the size of array: ";
     cin >> n;
     int arr[n];
 
+    cout << "Enter " << n << " unsorted element: ";
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
     selection_sort(arr, n);
+    cout<<"After sorted: ";
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
