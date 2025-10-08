@@ -1,40 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
-void selection_sort(int arr[], int n)
-{
-    for (int i = 0; i < n - 1; i++)
-    {
-        int minIndex = i;
 
-        for (int j = i + 1; j < n; j++)
-        {
-            if (arr[j] < arr[minIndex])
-            {
-                minIndex = j;
-            }
-        }
-        swap(arr[i],arr[minIndex]);
-    }
-}
 int main()
 {
-    int n;
-    cout << "Enter size of array: ";
-    cin >> n;
+    int data[3] = {10, 20, 30};
+    int next[3] = {1, 2, -1};
 
-    int arr[n];
-    cout << "Enter " << n << " elements: ";
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-    selection_sort(arr,n);
-    cout<<"Sorted array: ";
-    for (int i = 0; i < n; i++)
-    {
-        cout<<arr[i]<< " ";
-    }
-    
+    int head = 0;
 
+    cout << "Linked list: ";
+
+    int current = head;
+    while (current != -1)
+    {
+        cout << data[current] << " -> ";
+        current = next[current];
+            
+    }
+    cout << "NULL" << endl;
     return 0;
 }
