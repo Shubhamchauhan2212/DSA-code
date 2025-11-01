@@ -3,20 +3,15 @@ using namespace std;
 
 int main()
 {
-    int data[3] = {10, 20, 30};
-    int next[3] = {1, 2, -1};
-
-    int head = 0;
-
-    cout << "Linked list: ";
-
-    int current = head;
-    while (current != -1)
+    int n;
+    cout << "Enter size of array: ";
+    cin >> n;
+    int arr[n];
+    cout << "Enter " << n << " element: ";
+    for (int i = 0; i < n; i++)
     {
-        cout << data[current] << " -> ";
-        current = next[current];
-            
+        cin >> arr[n];  
     }
-    cout << "NULL" << endl;
+
     return 0;
 }

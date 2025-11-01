@@ -9,7 +9,7 @@ int main()
 
     int windowsum = 0;
     for (int i = 0; i < k; i++)
-    {
+    { 
         windowsum += arr[i];
     }
     cout<<"First window sum: "<<windowsum<<endl;
