@@ -14,7 +14,7 @@ int linearsearch(int arr[], int n, int key)
 int main()
 {
     int arr[5] = {10, 20, 30, 40, 50};
-    int n = 5, key = 50;
+    int n = 5, key = 30;
 
     int result = linearsearch(arr, n, key);
     if (result != -1)

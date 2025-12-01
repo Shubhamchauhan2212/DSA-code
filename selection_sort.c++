@@ -30,7 +30,7 @@ int main()
         cin >> arr[i];
     }
     selection_sort(arr, n);
-    cout<<"After sorted: ";
+    cout << "After sorted: ";
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";

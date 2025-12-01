@@ -25,19 +25,18 @@ int main()
         cin >> arr[i];
     }
     int key;
-    cout<<"Enter element to search: ";
-    cin>>key;
+    cout << "Enter element to search: ";
+    cin >> key;
 
-    int result = linearsearch(arr,n,key);
+    int result = linearsearch(arr, n, key);
     if (result != -1)
     {
-        cout<<"Element found at index: "<<result;
+        cout << "Element found at index: " << result;
     }
-    else{
-        cout<<"Element not found";
+    else
+    {
+        cout << "Element not found";
     }
-    
-
 
     return 0;
 }

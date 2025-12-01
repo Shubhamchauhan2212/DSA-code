@@ -4,25 +4,35 @@ using namespace std;
 int main()
 {
     int n, key;
-    cout << "Enter size of array: ";
+    cout << "Enter size of element: ";
     cin >> n;
-    int arr[n];
 
-    cout << "Enter " << n << " elements ";
+    int arr[n];
+    cout << "Enter " << n << " Sorted element: ";
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
+
     cout << "Enter element to search: ";
     cin >> key;
 
-    int pos = -1;
-    for (int i = 0; i < n; i++)
+    int low = 0, high = n - 1, pos = -1;
+    while (low <= high)
     {
-        if (arr[i] == key)
+        int mid = (low + high) / 2;
+        if (arr[mid] == key)
         {
-            pos = i;
+            pos = mid;
             break;
+        }
+        else if (key < arr[mid])
+        {
+            high = mid - 1;
+        }
+        else
+        {
+            low = mid + 1;
         }
     }
     if (pos != -1)

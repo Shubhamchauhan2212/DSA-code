@@ -18,10 +18,10 @@ int binarysearch(int arr[], int n, int key)
         {
             high = mid - 1;
         }
-        else{
+        else
+        {
             low = mid + 1;
         }
-        
     }
     return -1;
 }

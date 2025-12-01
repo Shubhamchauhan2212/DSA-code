@@ -29,26 +29,29 @@ void qs(vector<int> &arr, int low, int high)
     {
         int pIndex = partition(arr, low, high);
         qs(arr, low, pIndex - 1);
-        qs(arr,pIndex + 1,high);
+        qs(arr, pIndex + 1, high);
     }
 }
 
-vector<int> quickSort(vector<int> arr){
-    qs(arr,0,arr.size() - 1);
+vector<int> quickSort(vector<int> arr)
+{
+    qs(arr, 0, arr.size() - 1);
     return arr;
 }
 int main()
 {
-    vector<int> arr = {38,27,43,3,9,82,10};
+    vector<int> arr = {38, 27, 43, 3, 9, 82, 10};
 
-    cout<<"Before sorting: ";
-    for(int num : arr) cout<<num<<" ";
-    cout<<endl;
+    cout << "Before sorting: ";
+    for (int num : arr)
+        cout << num << " ";
+    cout << endl;
 
-    arr=quickSort(arr);
+    arr = quickSort(arr);
 
-    cout<<"After sorting: ";
-    for(int num : arr) cout<<num<<" ";
-    cout<<endl;
+    cout << "After sorting: ";
+    for (int num : arr)
+        cout << num << " ";
+    cout << endl;
     return 0;
 }

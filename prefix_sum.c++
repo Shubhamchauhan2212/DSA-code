@@ -39,7 +39,8 @@
         else
         {
             subarraySum = prefix[r] - prefix[l - 1];
-        }
+        }   
+            
 
         cout << "Sum of subarray from index " << l << " to " << r << " = " << subarraySum << endl;
         return 0;
