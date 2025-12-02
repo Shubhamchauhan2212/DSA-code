@@ -1,35 +1,35 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main()
 {
-    int n;
-    cout << "Enter the size of element: ";
-    cin >> n;
+    int num, isprime = 1;
+    cout << "Enter a numer to check number is prime or not: ";
+    cin >> num;
 
-    int arr[n];
-    cout << "Enter " << n << " element: ";
-    for (int i = 0; i < n; i++)
+    if (num <= 1)
     {
-        cin >> arr[i];
+        isprime = 0;
     }
-    // bubble sort
-    for (int i = 0; i < n; i++)
+    else
     {
-        for (int j = 0; j < n - i - 1; j++)
+        for (int i = 2; i <= sqrt(num); i++)
         {
-            if (arr[j] > arr[j + 1])
+            if (num % i == 0)
             {
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+                isprime = 0;
+                break;
             }
         }
     }
-    cout << "Sorted array: ";
-    for (int i = 0; i < n; i++)
+    if (isprime)
     {
-        cout << arr[i] << " ";
+        cout << num << " is prime number ";
+    }
+    else
+    {
+        cout << num << " is not prime number";
     }
 
     return 0;
