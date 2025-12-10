@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+int main()
+{
     priority_queue<int> pq; // max-heap by default
 
     // Push elements
@@ -12,7 +13,7 @@ int main() {
     cout << "Top element: " << pq.top() << endl; // 30 (largest)
 
     // pq.pop(); // remove top
-    cout << "New Top: " << pq.top() << endl;    // 20
+    cout << "New Top: " << pq.top() << endl; // 20
 
     // Add another element
     pq.push(40);

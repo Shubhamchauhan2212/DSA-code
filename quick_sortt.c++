@@ -37,13 +37,14 @@ vector<int> quicksort(vector<int> arr)
 }
 int main()
 {
-    vector<int> arr = {8, 5, 2, 1, 4};
+    vector<int> arr = {4, 1, 2, 5, 8, 7};
 
     cout << "Unsorted array: ";
     for (int i = 0; i < arr.size(); i++)
     {
-        cout << arr[i] << " ";
+        cout << arr[i];
     }
+
     vector<int> sorted = quicksort(arr);
     cout << "\nSorted array: ";
     for (int x : sorted)

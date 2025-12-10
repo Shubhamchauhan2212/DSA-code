@@ -1,6 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-void insertionsort(int arr[], int n)
+void insertion_sort(int arr[], int n)
 {
     for (int i = 0; i <= n - 1; i++)
     {
@@ -10,7 +10,6 @@ void insertionsort(int arr[], int n)
             int temp = arr[j - 1];
             arr[j - 1] = arr[j];
             arr[j] = temp;
-
             j--;
         }
     }
@@ -18,20 +17,21 @@ void insertionsort(int arr[], int n)
 int main()
 {
     int n;
-    cout << "Enter the size of array: ";
+    cout << "Enter size of Array: ";
     cin >> n;
 
     int arr[n];
-    cout << "Enter " << n << " elements: ";
+    cout << "Enter " << n << " unsorted Element: ";
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
-    insertionsort(arr,n);
+    insertion_sort(arr, n);
+    cout << "Sorted Element: ";
     for (int i = 0; i < n; i++)
     {
-        cout<<arr[i]<<" ";
+        cout << arr[i] << " ";
     }
-    
+
     return 0;
-}   
+}

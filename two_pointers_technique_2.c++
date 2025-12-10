@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    int target = 11;
+    int target = 10;
 
     int left = 0, right = arr.size() - 1;
     bool found = false;

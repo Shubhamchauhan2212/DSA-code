@@ -1,5 +1,3 @@
-//  dividing in half and if mid = key then return key;
-// mid != key then go to left side or right side ;
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -12,7 +10,6 @@ int binarysearch(int arr[], int n, int key)
         if (arr[mid] == key)
         {
             return mid;
-            break;
         }
         else if (key < arr[mid])
         {
@@ -44,6 +41,7 @@ int main()
     cin >> key;
 
     int pos = binarysearch(arr, n, key);
+
     if (pos != -1)
     {
         cout << "Element found at index: " << pos;

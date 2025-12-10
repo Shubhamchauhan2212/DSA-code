@@ -1,11 +1,12 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-void selectio_sort(int arr[], int n)
+
+void Selction_sort(int arr[], int n)
 {
     for (int i = 0; i <= n - 2; i++)
     {
         int mini = i;
-        for (int j = i + 1; j < n; j++)
+        for (int j = i; j <= n - 1; j++)
         {
             if (arr[j] < arr[mini])
             {
@@ -20,16 +21,16 @@ void selectio_sort(int arr[], int n)
 int main()
 {
     int n;
-    cout << "Enter number of element: ";
+    cout << "Enter the size of array: ";
     cin >> n;
 
-    int *arr = new int[n];
-    cout << "Enter " << n << " unsorted element: ";
+    int arr[n];
+    cout << "Enter " << n << " unorted element: ";
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
-    selectio_sort(arr,n);
+    Selction_sort(arr, n);
     cout << "Sorted array: ";
     for (int i = 0; i < n; i++)
     {
